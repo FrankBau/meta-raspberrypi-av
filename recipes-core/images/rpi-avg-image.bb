@@ -49,6 +49,7 @@ IMAGE_INSTALL_append += " \
   e2fsprogs-resize2fs \
   tzdata \
   watchdog \
+  yavta \
   start-stop-daemon \
   logrotate \
 "
