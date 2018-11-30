@@ -21,6 +21,9 @@ IMAGE_INSTALL_append = " \
   sintel-trailer-1080p \
 "
 
+# for remote debugging from build host (e.g. qtcreator)
+IMAGE_INSTALL_append = " openssh-sftp-server"
+
 # Qt5 base, tools and (most) modules
 IMAGE_INSTALL_append += " packagegroup-qt5"
 
