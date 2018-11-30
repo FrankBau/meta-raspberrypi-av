@@ -77,6 +77,7 @@ IMAGE_INSTALL_append += " \
 IMAGE_INSTALL_append += " \
   lighttpd \
   lighttpd-module-fastcgi \
+  php \
   php-cgi \
   php-cli \
 "
