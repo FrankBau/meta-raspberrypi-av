@@ -21,6 +21,18 @@ IMAGE_INSTALL_append = " \
   sintel-trailer-1080p \
 "
 
+# Qt5 base, tools and (most) modules
+IMAGE_INSTALL_append += " packagegroup-qt5"
+
+# Qt5 examples
+IMAGE_INSTALL_append += " \
+    basicquick \
+    cinematicexperience \
+    qtsmarthome \
+    qt5-opengles2-test \
+    qt5everywheredemo \
+"
+
 # toolbox
 IMAGE_INSTALL_append += " \
   python-modules \
@@ -65,7 +77,7 @@ IMAGE_INSTALL_append += " \
 IMAGE_INSTALL_append += " \
   lighttpd \
   lighttpd-module-fastcgi \
-  php \
+  php-cgi \
   php-cli \
 "
 
