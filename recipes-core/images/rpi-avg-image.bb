@@ -9,6 +9,8 @@ IMAGE_LINGUAS = "en-us"
 
 COMPATIBLE_MACHINE = "^rpi$"
 
+DEPENDS += "bcm2835-bootfiles"
+
 OMXPLAYER_rpi = "omxplayer"
 OMXPLAYER_rpi_aarch64 = ""
 
