@@ -86,7 +86,7 @@ IMAGE_INSTALL_append += " \
 
 # for WiFi client & access point
 IMAGE_INSTALL_append += " \
-  linux-firmware-bcm43430 \
+  linux-firmware-raspbian \
   wireless-tools \
   wpa-supplicant \
   hostapd \
