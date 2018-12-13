@@ -16,11 +16,6 @@ OMXPLAYER_rpi_aarch64 = ""
 
 IMAGE_INSTALL_append = " \
   packagegroup-core-full-cmdline \
-  packagegroup-gstreamer1.0 \
-  ${OMXPLAYER} \
-  sintel-trailer-480p \
-  sintel-trailer-720p \
-  sintel-trailer-1080p \
 "
 
 # Qt5 base, tools and (most) modules
@@ -70,9 +65,25 @@ IMAGE_INSTALL_append += " \
 
 IMAGE_INSTALL_append += " v4l-utils"
 
+# audio stuff
+IMAGE_INSTALL_append += " \
+  alsa-server \
+  alsa-plugins \
+  alsa-tools \
+  alsa-utils \
+  pulseaudio \
+  sox \
+"
+
+# video stuff
 IMAGE_INSTALL_append += " \
   opencv \
   ffmpeg \
+  packagegroup-gstreamer1.0 \
+  ${OMXPLAYER} \
+  sintel-trailer-480p \
+  sintel-trailer-720p \
+  sintel-trailer-1080p \
 "
 
 # web server stuff
@@ -123,3 +134,5 @@ ROOTFS_POSTPROCESS_COMMAND += " \
   set_date_and_time ; \
 "
 
+# kernel development on the target
+# IMAGE_INSTALL_append += " kernel-devsrc"
